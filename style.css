@@ -11,6 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 20px; /* Add padding for smaller screens */
 }
 
 .container {
@@ -22,6 +23,7 @@ body {
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
+    flex-direction: row; /* Default row layout */
 }
 
 .form-container {
@@ -146,4 +148,73 @@ input[type="password"] {
 
 .thank-you-message .btn:hover {
     background-color: #45a049;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        padding: 10px; 
+    }
+
+    .container {
+        flex-direction: column;
+        width: 100%; 
+        max-width: 400px; 
+        border-radius: 10px; 
+        overflow: hidden;
+    }
+
+    .form-container {
+        flex-direction: column; 
+        width: 100%;
+    }
+
+    .form-left {
+        height: 200px; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #eceff1;
+    }
+
+    .form-left img {
+        width: auto;
+        height: 100%;
+    }
+
+    .form-right {
+        padding: 20px; 
+    }
+
+    h2 {
+        font-size: 1.5em; 
+    }
+
+    .input-group {
+        margin-bottom: 15px;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    .btn {
+        padding: 8px 15px; 
+        font-size: 0.9em;
+    }
+
+    .thank-you-message {
+        padding: 30px; 
+    }
+
+    .thank-you-message h1 {
+        font-size: 1.5em; 
+    }
+
+    .thank-you-message p {
+        font-size: 1.1em; 
+    }
 }
