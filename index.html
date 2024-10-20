@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="form-left">
+                <img src="https://cdn.pixabay.com/photo/2024/05/02/09/16/web-development-8734249_640.png" alt="Login Image">
+            </div>
+            <div class="form-right">
+                <div id="form-wrapper">
+                    <h2 id="form-title">Login</h2>
+                    <form id="loginForm" onsubmit="return validateForm();">
+                        <div class="input-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email">
+                            <span id="email-error" class="error-message"></span>
+                        </div>
+                        <div class="input-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Enter your password">
+                            <span id="password-error" class="error-message"></span>
+                        </div>
+                        <button type="submit" id="login-btn" class="btn">Login</button>
+                        <p class="switch-form">Not registered? <a href="#" onclick="toggleForm()">Sign Up</a></p>
+                    </form>
+
+                    <form id="signupForm" onsubmit="return validateSignupForm();" style="display:none;">
+                        <h2 id="signup-title">Sign Up</h2>
+                        <div class="input-group">
+                            <label for="signup-email">Email</label>
+                            <input type="email" id="signup-email" name="email" placeholder="Enter your email">
+                            <span id="signup-email-error" class="error-message"></span>
+                        </div>
+                        <div class="input-group">
+                            <label for="signup-password">Password</label>
+                            <input type="password" id="signup-password" name="password" placeholder="Enter your password">
+                            <span id="signup-password-error" class="error-message"></span>
+                        </div>
+                        <button type="submit" id="signup-btn" class="btn">Sign Up</button>
+                        <p class="switch-form">Already registered? <a href="#" onclick="toggleForm()">Login</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
